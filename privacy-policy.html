@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lenser – Politique de confidentialité / Privacy policy</title>
+  <style>
+    :root { color-scheme: light dark; --bg: #f8fafc; --text: #0f172a; --muted: #475569; --accent: #4f46e5; --card: #fff; --border: #e2e8f0; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #0f172a; --text: #e2e8f0; --muted: #94a3b8; --accent: #a5b4fc; --card: #1e293b; --border: #334155; } }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 system-ui, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+    nav { display: flex; gap: 16px; margin-bottom: 24px; }
+    a { color: var(--accent); }
+    section { margin-bottom: 48px; padding: 24px 28px; border: 1px solid var(--border); border-radius: 12px; background: var(--card); }
+    h1 { margin: 0 0 4px; font-size: 26px; }
+    h2 { margin: 28px 0 8px; font-size: 18px; }
+    .meta { margin: 0 0 16px; color: var(--muted); font-size: 14px; }
+    ul { padding-left: 22px; }
+    li { margin: 4px 0; }
+    code { font-size: 14px; }
+  </style>
+</head>
+<body>
+<main>
+  <nav><a href="#fr" lang="fr">Français</a><a href="#en" lang="en">English</a></nav>
+
+  <!-- ─────────────────────────────── FRANÇAIS ─────────────────────────────── -->
+  <section id="fr" lang="fr">
+    <h1>Politique de confidentialité de Lenser</h1>
+    <p class="meta">Extension « Lenser – Recherche visuelle » · Dernière mise à jour : 3 octobre 2026</p>
+
+    <p>Lenser est une extension de navigateur qui permet d'envoyer une capture d'écran ou une image à Google Lens et d'extraire du texte d'une image. Cette page explique quelles données sont utilisées, où elles vont, et pourquoi.</p>
+
+    <h2>En résumé</h2>
+    <ul>
+      <li>Lenser n'a <strong>aucun serveur</strong> : le développeur ne reçoit, ne stocke et ne voit <strong>aucune</strong> de vos données.</li>
+      <li>Une image n'est envoyée à <strong>Google Lens</strong> que lorsque <strong>vous le demandez</strong>.</li>
+      <li>L'<strong>extraction de texte</strong> est faite <strong>sur votre ordinateur</strong> : l'image et le texte ne sont envoyés nulle part.</li>
+      <li>Pas de compte, pas de statistiques d'utilisation, pas de publicité, pas de traceur, pas de cookie.</li>
+    </ul>
+
+    <h2>1. Images envoyées à Google Lens (sur votre demande uniquement)</h2>
+    <p>Quand vous utilisez une fonction de recherche (raccourci clavier, bouton de la fenêtre de l'extension, menu du clic droit ou bouton « Ouvrir dans Lens »), Lenser transmet à Google Lens, directement depuis votre navigateur :</p>
+    <ul>
+      <li>la capture de la partie visible de la page, ou de la zone que vous avez sélectionnée ;</li>
+      <li>ou l'image de votre ordinateur que vous avez choisie, glissée ou collée ;</li>
+      <li>ou, pour une image publique sur laquelle vous avez fait un clic droit, son adresse web (Google télécharge alors l'image lui-même).</li>
+    </ul>
+    <p>Ces images peuvent contenir des informations visibles à l'écran au moment de la capture : vérifiez ce que vous sélectionnez. Les résultats s'affichent sur le site de Google, et leur traitement relève de la <a href="https://policies.google.com/privacy">politique de confidentialité de Google</a>. Si vous êtes connecté à un compte Google, Google peut associer la recherche à ce compte selon ses propres règles. Lenser ne conserve aucune copie de ces images.</p>
+
+    <h2>2. Extraction de texte (entièrement locale)</h2>
+    <p>La reconnaissance de texte utilise le moteur open source Tesseract, embarqué dans l'extension. Elle fonctionne hors ligne, sur votre ordinateur. L'image et le texte reconnu ne quittent pas votre appareil. Le texte n'est copié dans votre presse-papiers que si vous cliquez sur « Copier », ou si vous avez activé la copie automatique dans les options.</p>
+
+    <h2>3. Données conservées dans votre navigateur</h2>
+    <ul>
+      <li><strong>Réglages</strong> (ouverture des résultats, langues, copie automatique, langue de l'interface) : enregistrés avec <code>chrome.storage.sync</code>. Si la synchronisation de votre navigateur est activée, ils sont synchronisés par votre navigateur entre vos appareils, comme vos autres réglages. Ils ne contiennent aucune image ni aucun texte.</li>
+      <li><strong>Images temporaires</strong> : le temps de passer d'une étape à l'autre, l'image capturée est gardée en mémoire avec <code>chrome.storage.session</code>. Elle est supprimée dès qu'elle a été lue, au plus tard après 5 minutes, et dans tous les cas à la fermeture du navigateur. Elle n'est jamais écrite sur le disque par Lenser.</li>
+    </ul>
+
+    <h2>4. Permissions demandées</h2>
+    <ul>
+      <li><strong>activeTab</strong> : accéder à l'onglet affiché, uniquement au moment où vous utilisez Lenser, pour capturer ce qui est visible.</li>
+      <li><strong>scripting</strong> : afficher l'outil de sélection de zone sur la page, à votre demande.</li>
+      <li><strong>contextMenus</strong> : ajouter les entrées Lenser au menu du clic droit.</li>
+      <li><strong>storage</strong> : enregistrer vos réglages et les images temporaires décrites ci-dessus.</li>
+      <li><strong>clipboardWrite</strong> (facultative) : demandée seulement si vous activez la copie automatique du texte reconnu. Vous pouvez la retirer à tout moment en désactivant l'option.</li>
+    </ul>
+    <p>Lenser ne demande l'accès à aucun site en permanence et ne lit pas votre historique de navigation.</p>
+
+    <h2>5. Partage et vente</h2>
+    <p>Lenser ne vend aucune donnée et ne transmet rien à des tiers, à l'exception de l'envoi à Google Lens que vous déclenchez vous-même (section 1). L'utilisation des informations par Lenser respecte la <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use">politique relative aux données utilisateur du Chrome Web Store</a>, y compris les exigences d'utilisation limitée.</p>
+
+    <h2>6. Marques</h2>
+    <p>Lenser est un projet indépendant, qui n'est ni affilié à Google LLC, ni approuvé par Google LLC. Google et Google Lens sont des marques de Google LLC.</p>
+
+    <h2>7. Modifications et contact</h2>
+    <p>Toute modification de cette politique sera publiée sur cette page avec une nouvelle date. Pour toute question : <a href="mailto:contact.sokenzane@gmail.com">contact.sokenzane@gmail.com</a>.</p>
+  </section>
+
+  <!-- ─────────────────────────────── ENGLISH ─────────────────────────────── -->
+  <section id="en" lang="en">
+    <h1>Lenser privacy policy</h1>
+    <p class="meta">“Lenser – Visual Search” extension · Last updated: October 3, 2026</p>
+
+    <p>Lenser is a browser extension that sends a screenshot or an image to Google Lens and extracts text from images. This page explains what data is used, where it goes, and why.</p>
+
+    <h2>At a glance</h2>
+    <ul>
+      <li>Lenser has <strong>no server</strong>: the developer does not receive, store or see <strong>any</strong> of your data.</li>
+      <li>An image is sent to <strong>Google Lens</strong> only <strong>when you ask for it</strong>.</li>
+      <li><strong>Text extraction</strong> runs <strong>on your computer</strong>: the image and the text are not sent anywhere.</li>
+      <li>No account, no usage analytics, no ads, no trackers, no cookies.</li>
+    </ul>
+
+    <h2>1. Images sent to Google Lens (only at your request)</h2>
+    <p>When you use a search feature (keyboard shortcut, extension popup button, right-click menu, or the “Open in Lens” button), Lenser sends to Google Lens, directly from your browser:</p>
+    <ul>
+      <li>a capture of the visible part of the page, or of the area you selected;</li>
+      <li>or the image from your computer that you chose, dropped or pasted;</li>
+      <li>or, for a public image you right-clicked, its web address (Google then downloads the image itself).</li>
+    </ul>
+    <p>These images may contain whatever is visible on screen at capture time: check what you select. Results are displayed on Google's website and processed under <a href="https://policies.google.com/privacy">Google's privacy policy</a>. If you are signed in to a Google account, Google may associate the search with that account under its own rules. Lenser keeps no copy of these images.</p>
+
+    <h2>2. Text extraction (fully local)</h2>
+    <p>Text recognition uses the open-source Tesseract engine bundled with the extension. It works offline, on your computer. The image and the recognized text never leave your device. The text is copied to your clipboard only when you click “Copy”, or if you turned on automatic copy in the options.</p>
+
+    <h2>3. Data kept in your browser</h2>
+    <ul>
+      <li><strong>Settings</strong> (how results open, OCR languages, automatic copy, interface language) are saved with <code>chrome.storage.sync</code>. If browser sync is on, your browser syncs them across your devices like your other settings. They contain no images and no text.</li>
+      <li><strong>Temporary images</strong>: while moving from one step to the next, the captured image is kept in memory with <code>chrome.storage.session</code>. It is deleted as soon as it has been read, after 5 minutes at most, and in any case when the browser closes. Lenser never writes it to disk.</li>
+    </ul>
+
+    <h2>4. Permissions</h2>
+    <ul>
+      <li><strong>activeTab</strong>: access the displayed tab, only at the moment you use Lenser, to capture what is visible.</li>
+      <li><strong>scripting</strong>: show the area selection tool on the page, at your request.</li>
+      <li><strong>contextMenus</strong>: add Lenser entries to the right-click menu.</li>
+      <li><strong>storage</strong>: save your settings and the temporary images described above.</li>
+      <li><strong>clipboardWrite</strong> (optional): requested only if you turn on automatic copy of recognized text. You can revoke it at any time by turning the option off.</li>
+    </ul>
+    <p>Lenser does not request permanent access to any website and does not read your browsing history.</p>
+
+    <h2>5. Sharing and sale</h2>
+    <p>Lenser does not sell any data and does not transfer anything to third parties, except the upload to Google Lens that you trigger yourself (section 1). Lenser's use of information complies with the <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use">Chrome Web Store User Data Policy</a>, including the Limited Use requirements.</p>
+
+    <h2>6. Trademarks</h2>
+    <p>Lenser is an independent project, not affiliated with or endorsed by Google LLC. Google and Google Lens are trademarks of Google LLC.</p>
+
+    <h2>7. Changes and contact</h2>
+    <p>Any change to this policy will be published on this page with a new date. Questions: <a href="mailto:contact.sokenzane@gmail.com">contact.sokenzane@gmail.com</a>.</p>
+  </section>
+</main>
+</body>
+</html>
