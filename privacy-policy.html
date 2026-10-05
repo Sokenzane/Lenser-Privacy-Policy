@@ -27,7 +27,7 @@
   <!-- ─────────────────────────────── FRANÇAIS ─────────────────────────────── -->
   <section id="fr" lang="fr">
     <h1>Politique de confidentialité de Lenser</h1>
-    <p class="meta">Extension « Lenser – Recherche visuelle » · Dernière mise à jour : 3 octobre 2026</p>
+    <p class="meta">Extension « Lenser – Recherche visuelle » · Dernière mise à jour : 5 octobre 2026</p>
 
     <p>Lenser est une extension de navigateur qui permet d'envoyer une capture d'écran ou une image à Google Lens et d'extraire du texte d'une image. Cette page explique quelles données sont utilisées, où elles vont, et pourquoi.</p>
 
@@ -44,23 +44,25 @@
     <ul>
       <li>la capture de la partie visible de la page, ou de la zone que vous avez sélectionnée ;</li>
       <li>ou l'image de votre ordinateur que vous avez choisie, glissée ou collée ;</li>
-      <li>ou, pour une image publique sur laquelle vous avez fait un clic droit, son adresse web (Google télécharge alors l'image lui-même).</li>
+      <li>ou l'image sur laquelle vous avez fait un clic droit. Si la page ne permet pas de la lire et que l'image est publique, seule son adresse web est transmise, et Google télécharge l'image lui-même ;</li>
+      <li>ou l'image affichée à cet instant par une vidéo sur laquelle vous avez fait un clic droit.</li>
     </ul>
     <p>Ces images peuvent contenir des informations visibles à l'écran au moment de la capture : vérifiez ce que vous sélectionnez. Les résultats s'affichent sur le site de Google, et leur traitement relève de la <a href="https://policies.google.com/privacy">politique de confidentialité de Google</a>. Si vous êtes connecté à un compte Google, Google peut associer la recherche à ce compte selon ses propres règles. Lenser ne conserve aucune copie de ces images.</p>
 
     <h2>2. Extraction de texte (entièrement locale)</h2>
-    <p>La reconnaissance de texte utilise le moteur open source Tesseract, embarqué dans l'extension. Elle fonctionne hors ligne, sur votre ordinateur. L'image et le texte reconnu ne quittent pas votre appareil. Le texte n'est copié dans votre presse-papiers que si vous cliquez sur « Copier », ou si vous avez activé la copie automatique dans les options.</p>
+    <p>La reconnaissance de texte utilise le moteur open source Tesseract et ses modèles de langue, embarqués dans l'extension. Elle fonctionne hors ligne, sur votre ordinateur, y compris la détection automatique de la langue du texte. L'image et le texte reconnu ne quittent pas votre appareil. Le texte n'est copié dans votre presse-papiers que si vous cliquez sur « Copier », ou si vous avez activé la copie automatique dans les options.</p>
 
     <h2>3. Données conservées dans votre navigateur</h2>
     <ul>
-      <li><strong>Réglages</strong> (ouverture des résultats, langues, copie automatique, langue de l'interface) : enregistrés avec <code>chrome.storage.sync</code>. Si la synchronisation de votre navigateur est activée, ils sont synchronisés par votre navigateur entre vos appareils, comme vos autres réglages. Ils ne contiennent aucune image ni aucun texte.</li>
+      <li><strong>Réglages</strong> (ouverture des résultats, langues d'extraction supplémentaires, copie automatique, langue de l'interface, thème) : enregistrés avec <code>chrome.storage.sync</code>. Si la synchronisation de votre navigateur est activée, ils sont synchronisés par votre navigateur entre vos appareils, comme vos autres réglages. Ils ne contiennent aucune image ni aucun texte.</li>
       <li><strong>Images temporaires</strong> : le temps de passer d'une étape à l'autre, l'image capturée est gardée en mémoire avec <code>chrome.storage.session</code>. Elle est supprimée dès qu'elle a été lue, au plus tard après 5 minutes, et dans tous les cas à la fermeture du navigateur. Elle n'est jamais écrite sur le disque par Lenser.</li>
+      <li><strong>Message d'erreur en attente</strong> : si une action échoue sur une page où rien ne peut s'afficher, le texte du message est gardé quelques secondes avec <code>chrome.storage.session</code> pour être montré dans la fenêtre de l'extension, puis supprimé.</li>
     </ul>
 
     <h2>4. Permissions demandées</h2>
     <ul>
       <li><strong>activeTab</strong> : accéder à l'onglet affiché, uniquement au moment où vous utilisez Lenser, pour capturer ce qui est visible.</li>
-      <li><strong>scripting</strong> : afficher l'outil de sélection de zone sur la page, à votre demande.</li>
+      <li><strong>scripting</strong> : à votre demande seulement, afficher l'outil de sélection de zone sur la page, lire l'image ou l'image de la vidéo sur laquelle vous avez fait un clic droit, et afficher un court message si une action échoue.</li>
       <li><strong>contextMenus</strong> : ajouter les entrées Lenser au menu du clic droit.</li>
       <li><strong>storage</strong> : enregistrer vos réglages et les images temporaires décrites ci-dessus.</li>
       <li><strong>clipboardWrite</strong> (facultative) : demandée seulement si vous activez la copie automatique du texte reconnu. Vous pouvez la retirer à tout moment en désactivant l'option.</li>
@@ -80,7 +82,7 @@
   <!-- ─────────────────────────────── ENGLISH ─────────────────────────────── -->
   <section id="en" lang="en">
     <h1>Lenser privacy policy</h1>
-    <p class="meta">“Lenser – Visual Search” extension · Last updated: October 3, 2026</p>
+    <p class="meta">“Lenser – Visual Search” extension · Last updated: October 5, 2026</p>
 
     <p>Lenser is a browser extension that sends a screenshot or an image to Google Lens and extracts text from images. This page explains what data is used, where it goes, and why.</p>
 
@@ -97,23 +99,25 @@
     <ul>
       <li>a capture of the visible part of the page, or of the area you selected;</li>
       <li>or the image from your computer that you chose, dropped or pasted;</li>
-      <li>or, for a public image you right-clicked, its web address (Google then downloads the image itself).</li>
+      <li>or the image you right-clicked. If the page does not allow reading it and the image is public, only its web address is sent, and Google downloads the image itself;</li>
+      <li>or the frame shown at that moment by a video you right-clicked.</li>
     </ul>
     <p>These images may contain whatever is visible on screen at capture time: check what you select. Results are displayed on Google's website and processed under <a href="https://policies.google.com/privacy">Google's privacy policy</a>. If you are signed in to a Google account, Google may associate the search with that account under its own rules. Lenser keeps no copy of these images.</p>
 
     <h2>2. Text extraction (fully local)</h2>
-    <p>Text recognition uses the open-source Tesseract engine bundled with the extension. It works offline, on your computer. The image and the recognized text never leave your device. The text is copied to your clipboard only when you click “Copy”, or if you turned on automatic copy in the options.</p>
+    <p>Text recognition uses the open-source Tesseract engine and its language models, bundled with the extension. It works offline, on your computer, including the automatic detection of the text language. The image and the recognized text never leave your device. The text is copied to your clipboard only when you click “Copy”, or if you turned on automatic copy in the options.</p>
 
     <h2>3. Data kept in your browser</h2>
     <ul>
-      <li><strong>Settings</strong> (how results open, OCR languages, automatic copy, interface language) are saved with <code>chrome.storage.sync</code>. If browser sync is on, your browser syncs them across your devices like your other settings. They contain no images and no text.</li>
+      <li><strong>Settings</strong> (how results open, additional text-extraction languages, automatic copy, interface language, theme) are saved with <code>chrome.storage.sync</code>. If browser sync is on, your browser syncs them across your devices like your other settings. They contain no images and no text.</li>
       <li><strong>Temporary images</strong>: while moving from one step to the next, the captured image is kept in memory with <code>chrome.storage.session</code>. It is deleted as soon as it has been read, after 5 minutes at most, and in any case when the browser closes. Lenser never writes it to disk.</li>
+      <li><strong>Pending error message</strong>: if an action fails on a page where nothing can be shown, the message text is kept for a few seconds with <code>chrome.storage.session</code> so the extension popup can display it, then deleted.</li>
     </ul>
 
     <h2>4. Permissions</h2>
     <ul>
       <li><strong>activeTab</strong>: access the displayed tab, only at the moment you use Lenser, to capture what is visible.</li>
-      <li><strong>scripting</strong>: show the area selection tool on the page, at your request.</li>
+      <li><strong>scripting</strong>: only at your request, show the area selection tool on the page, read the image or video frame you right-clicked, and show a short message if an action fails.</li>
       <li><strong>contextMenus</strong>: add Lenser entries to the right-click menu.</li>
       <li><strong>storage</strong>: save your settings and the temporary images described above.</li>
       <li><strong>clipboardWrite</strong> (optional): requested only if you turn on automatic copy of recognized text. You can revoke it at any time by turning the option off.</li>
